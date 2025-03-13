@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 
 export const Detail = () => {
 const { id }= useParams();
@@ -12,7 +12,7 @@ export const App = () => {
   const [title, setTitle] = useState("Sho shua 2.0");
 
   useEffect(()=> {
-    if(count==990){
+    if(count===990){
       setTitle("hai raggiunto il livello Ken manca poco per il Chen, FORZA")
     }
   },[count])
@@ -42,9 +42,7 @@ export const App = () => {
             Cambia
           </button>
 
-          <p className="text-center">
-            Modifica <code>src/App.tsx</code> e salva per testare l'hot reload
-          </p>
+          <Link to="/frontend-rocks/SHOU/1">Link della pagina dettagliata</Link>
         </div>
       </div>
     </div>
