@@ -1,9 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router";
+
+export const Detail = () => {
+const { id }= useParams();
+  return <div className="text-7xl text-yellow-400 font-bold">SHOU {id}</div>
+}
+
 
 export const App = () => {
   const [count, setCount] = useState(0);
-  const [title, setTitle] = useState("Sho shua");
+  const [title, setTitle] = useState("Sho shua 2.0");
 
+  useEffect(()=> {
+    if(count==990){
+      setTitle("hai raggiunto il livello Ken manca poco per il Chen, FORZA")
+    }
+  },[count])
+
+  
   return (
     <div className="h-dvh flex flex-col items-center justify-center">
       <div className="bg-white p-8 rounded-md shadow-lg">
@@ -16,7 +30,7 @@ export const App = () => {
         <div className="flex flex-col items-center space-y-4">
           <button
             className="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md cursor-pointer hover:bg-blue-600 transition-colors"
-            onClick={() => setCount((count) => count + 1)}
+            onClick={() => setCount((count) => count + 9)}
           >
             Hai premuto il pulsante {count} {count === 1 ? "volta" : "volte"}
           </button>
