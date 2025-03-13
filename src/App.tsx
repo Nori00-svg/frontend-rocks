@@ -42,7 +42,7 @@ export const App = () => {
             Cambia
           </button>
 
-          <Link to="/frontend-rocks/SHOU/1">Link della pagina dettagliata</Link>
+          <Link to="/frontend-rocks/SHOU/1  text-violet-400 font-bold">Link della pagina dettagliata</Link>
         </div>
       </div>
     </div>
